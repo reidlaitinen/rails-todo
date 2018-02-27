@@ -13,3 +13,58 @@
  *= require_tree .
  *= require_self
  */
+ 
+
+#header-tile {
+  display: flex;
+  align-self: center;
+  background-color: grey;
+  justify-content: center;
+}
+
+.header-container {
+  display: flex;
+  width: 80%;
+  background-color: grey;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  color: white;
+}
+
+.index-body {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 50%;
+}
+
+.todo-card {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  background-color: grey;
+  border: 1px solid black;
+}
+
+.options-links {
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-around;
+}
+
+.options-link {
+  text-decoration: none;
+}

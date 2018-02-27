@@ -1,7 +1,18 @@
-<h1>Completed Items</h1>
-<% @todos.each do |todo| %>
-  <h2><%= todo.title %></h2>
-  <%= link_to 'Show', todo_path(todo) %>
-  <%= link_to 'Edit', edit_todo_path(todo) %>
-  <%= link_to 'Delete', todo_path(todo), method: :delete %>
-<% end %>
+<div class='index-body'>
+  <div class='todo-list'>
+    <h1>Completed Items</h1>
+    <% @todos.each do |todo| %>
+      <div class='todo-card'>
+        <div class='todo-card-title'>
+          <h3><%= todo.title %></h3>
+          <h5>(Priority: <%= todo.priority %>)</h5>
+        </div>
+        <div class='options-links'>
+          <%= link_to 'Show', todo_path(todo), { :class => 'options-link'} %> &nbsp; &nbsp;
+          <%= link_to 'Edit', edit_todo_path(todo), { :class => 'options-link'} %> &nbsp; &nbsp;
+          <%= link_to 'Delete', todo_path(todo), method: :delete, class: 'options-link' %> &nbsp; &nbsp;
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

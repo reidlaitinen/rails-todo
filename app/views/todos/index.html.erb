@@ -1,11 +1,20 @@
-<h1>To-Do List</h1>
-<p>
-  <%= link_to 'Create New Item', new_todo_path %>
-</p>
-<% @todos.each do |todo| %>
-  <h2><%= todo.title %></h2>
-  <h3>(Priority: <%= todo.priority %>)</h3>
-  <%= link_to 'Show', todo_path(todo) %>
-  <%= link_to 'Edit', edit_todo_path(todo) %>
-  <%= link_to 'Delete', todo_path(todo), method: :delete %>
-<% end %>
+<div class='index-body'>
+  <div class='todo-list'>
+    <% @todos.each do |todo| %>
+      <div class='todo-card'>
+        <div class='todo-card-title'>
+          <h3><%= todo.title %></h3>
+          <h5>(Priority: <%= todo.priority %>)</h5>
+        </div>
+        <div class='options-links'>
+          <%= link_to 'Show', todo_path(todo), { :class => 'options-link'} %> &nbsp; &nbsp;
+          <%= link_to 'Edit', edit_todo_path(todo), { :class => 'options-link'} %> &nbsp; &nbsp;
+          <%= link_to 'Delete', todo_path(todo), method: :delete, class: 'options-link' %> &nbsp; &nbsp;
+        </div>
+      </div>
+    <% end %>
+    <div class='todo-card'>
+        <h3><%= link_to 'Create New Item', new_todo_path %></h3>
+    </div>
+  </div>
+</div>
