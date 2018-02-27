@@ -1,0 +1,22 @@
+<header class='header-container'>
+  <div id='header-title'>
+    <h1 class='header-title-h1'>My To-Do List</h1>
+    <p class='header-subtitle'>If you need something done, ask a busy person to do it.</p>
+  </div>
+  <div id='navbar'>
+    <div id='nav-links'>
+      <div id='nav-home' class='nav-item'>
+        <%= link_to 'Home', root_path %>
+      </div>
+      <div id='nav-all' class='nav-item'>
+        <%= link_to 'To-Do List', todos_path %>
+      </div>
+      <div id='nav-new' class='nav-item'>
+        <%= link_to '+ New Item', new_todo_path %>
+      </div>
+      <div id='nav-completed' class='nav-item'>
+        <%= link_to 'View Completed Items', completed_path %>
+      </div>
+    </div>
+  </div>
+</header>
